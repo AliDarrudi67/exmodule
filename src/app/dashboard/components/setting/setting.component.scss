@@ -1,0 +1,22 @@
+.full-screen{
+  right: 0;
+  top: 8px;
+  fill: #fff;
+}
+#rsiParent{
+  max-height: 240px;
+  overflow: auto;
+}
+.rsiBox{
+  background-image: url("/assets/images/ground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #ccc;
+  background-blend-mode: darken;
+  margin-bottom: 15px;
+}
+.rsiBox:nth-child(even){
+  background-blend-mode: luminosity;
+}

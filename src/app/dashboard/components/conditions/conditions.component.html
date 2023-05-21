@@ -1,0 +1,109 @@
+<div class="container mt-3">
+  <div class="row">
+    <h3 class="text-white"><span class="opacity-50">Backest</span> Conditions</h3>
+
+    <div id="conditionsBox" class="p-3 position-relative">
+      <img src="assets/images/mini-logo.png" class="mini-logo"/>
+      <form class="d-flex justify-content-between my-custom-component-small gap-2">
+        <div class="col-sm-6">
+          <mat-form-field class="w-100 mb-2" subscriptSizing="dynamic">
+            <mat-select  [(value)]="coin">
+              <mat-option [value]="1">BTC</mat-option>
+              <mat-option [value]="2">TTR</mat-option>
+              <mat-option [value]="3">DLR</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="d-flex justify-content-between gap-2">
+            <mat-form-field class="mb-2" subscriptSizing="dynamic">
+              <input matInput [value]="'2023-03-03'" [matDatepicker]="pickerStart" readonly>
+              <mat-datepicker-toggle matIconSuffix [for]="pickerStart"></mat-datepicker-toggle>
+              <mat-datepicker #pickerStart></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="mb-2" subscriptSizing="dynamic">
+              <input matInput [value]="'2023-03-03'" [matDatepicker]="pickerEnd" readonly>
+              <mat-datepicker-toggle matIconSuffix [for]="pickerEnd">
+              </mat-datepicker-toggle>
+              <mat-datepicker #pickerEnd></mat-datepicker>
+            </mat-form-field>
+          </div>
+
+          <mat-form-field class="w-100 mb-2" subscriptSizing="dynamic">
+            <mat-select [(value)]="coin">
+              <mat-option [value]="1">Smain</mat-option>
+              <mat-option [value]="2">TTR</mat-option>
+              <mat-option [value]="3">DLR</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w-100 mb-2" subscriptSizing="dynamic">
+            <mat-select [(value)]="coin">
+              <mat-option [value]="1">Competition1</mat-option>
+              <mat-option [value]="2">TTR</mat-option>
+              <mat-option [value]="3">DLR</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+        <div class="col-sm-6">
+          <div class="d-flex justify-content-between gap-2">
+            <section class="col-6">
+              <p class="text-white opacity-75 pt-2">Exchange Fee:</p>
+            </section>
+            <section class="col-4">
+              <mat-form-field class="mb-2" subscriptSizing="dynamic">
+                <input matInput [value]="'0.025'">
+              </mat-form-field>
+            </section>
+            <section class="col-2">
+              <p class="text-white opacity-75 pt-2">%</p>
+            </section>
+          </div>
+
+          <div class="d-flex justify-content-between gap-2">
+            <section class="col-6">
+              <p class="text-white opacity-75 pt-2">Starting Balance:</p>
+            </section>
+            <section class="col-4">
+              <mat-form-field class="mb-2" subscriptSizing="dynamic">
+                <input matInput [value]="'10.000.00'">
+              </mat-form-field>
+            </section>
+            <section class="col-2">
+              <p class="text-white opacity-75 pt-2">USD</p>
+            </section>
+          </div>
+
+          <div class="d-flex justify-content-between gap-2">
+            <section class="col-6">
+              <p class="text-white opacity-75 pt-2">Stop Loss:</p>
+            </section>
+            <section class="col-4">
+              <mat-form-field class="mb-2" subscriptSizing="dynamic">
+                <input matInput>
+              </mat-form-field>
+            </section>
+            <section class="col-2">
+              <p class="text-white opacity-75 pt-2">%</p>
+            </section>
+          </div>
+
+          <div class="d-flex justify-content-between gap-2">
+            <section class="col-6">
+              <p class="text-white opacity-75 pt-2">Take Profit:</p>
+            </section>
+            <section class="col-4">
+              <mat-form-field class="mb-2" subscriptSizing="dynamic">
+                <input matInput>
+              </mat-form-field>
+            </section>
+            <section class="col-2">
+              <p class="text-white opacity-75 pt-2">%</p>
+            </section>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+body {
+  background-color: $backgroundColor;
+  background-image: url("/assets/images/body.png");
+  background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+  font-size: 14px;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #343333;
+  border-radius: 10px;
+  width: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f0f0;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+.my-custom-component-small {
+  .mat-mdc-form-field-flex > .mat-mdc-form-field-infix {
+    padding: 0.6em 0 !important;
+  }
+
+  .mat-mdc-form-field-label-wrapper {
+    top: -1.5em;
+  }
+  .mdc-text-field--filled:not(.mdc-text-field--disabled){
+    background: #1c1c1c;
+    border-radius: 10px;
+  }
+  &.transparent{
+    .mdc-text-field--filled:not(.mdc-text-field--disabled){
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+  &.mat-mdc-form-field-appearance-outline.mat-mdc-form-field-can-float.mat-mdc-form-field-should-float .mat-mdc-form-field-label {
+    transform: translateY(1em) scale(.95);
+    width: 133.33333%;
+  }
+
+  .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: #ccc !important;
+    font-size: 14px !important;
+  }
+
+  .mat-mdc-select-value {
+    color: #ccc !important;
+    font-size: 14px !important;
+  }
+  .mdc-text-field--filled .mdc-line-ripple::after{
+    border-bottom-color: #6E587D!important;
+  }
+  .mat-mdc-form-field-infix{
+    min-width: unset!important;
+    width: unset!important;
+  }
+}
+
+.mat-mdc-form-field-outline-start {
+  border-radius: 0 10px 10px 0 !important;
+  min-width: 10px !important;
+}
+
+.mat-mdc-form-field-outline-end {
+  border-radius: 10px 0 0 10px !important;
+}
+
+.mat-mdc-form-field-infix {
+  min-height: unset !important;
+}
+
+mat-datepicker-toggle {
+  color: white !important;
+}
+
+.mat-mdc-select-arrow svg {
+  fill: #fff!important;
+}
