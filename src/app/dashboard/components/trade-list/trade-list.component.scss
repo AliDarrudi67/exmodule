@@ -1,0 +1,27 @@
+.full-screen{
+  right: 0;
+  top: 8px;
+  fill: #fff;
+}
+#tableParent{
+  max-height: 300px;
+  overflow: auto;
+}
+#tradeTable,mat-paginator,tr,td,th{
+  background-color: transparent!important;
+  color: #fff;
+}
+.fade-effect:after{
+  content  : "";
+  position : absolute;
+  z-index  : 1;
+  bottom   : 0;
+  left     : 0;
+  pointer-events   : none;
+  background-image : linear-gradient(to bottom, rgba(1, 1, 1, 0), rgb(50, 50, 50) 90%);
+  width    : 100%;
+  height   : 4em;
+}
+.mdc-data-table__cell, .mdc-data-table__header-cell{
+  border-bottom: none;
+}

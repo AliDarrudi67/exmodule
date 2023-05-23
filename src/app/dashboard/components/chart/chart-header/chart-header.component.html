@@ -1,1 +1,89 @@
-<p>chart-header works!</p>
+<div class="container mt-3">
+  <div class="row">
+    <h3 class="text-white"><span class="opacity-50">Chart</span> View
+      <svg class="feather feather-chevron-down" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+           stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </h3>
+
+    <div class="d-block d-lg-flex justify-content-between">
+      <section class="mb-2 mb-lg-0">
+        <app-box [padding]="'0'">
+          <ng-container body>
+            <div class="spark-parent position-relative">
+              <div id="sparkLine"></div>
+              <div id="chart-spark1" class="position-relative">
+                <span class="spark-circle"></span>
+                <span class="spark-circle right"></span>
+                <apx-chart
+                  #chartspark1
+                  [series]="chartAreaSparkline1Options.series"
+                  [chart]="commonAreaSparlineOptions.chart"
+                  [stroke]="commonAreaSparlineOptions.stroke"
+                  [yaxis]="commonAreaSparlineOptions.yaxis"
+                  [fill]="commonAreaSparlineOptions.fill"
+                  [colors]="chartAreaSparkline1Options.colors"
+                  [title]="chartAreaSparkline1Options.title"
+                  [subtitle]="chartAreaSparkline1Options.subtitle"
+                ></apx-chart>
+              </div>
+            </div>
+          </ng-container>
+        </app-box>
+      </section>
+
+      <section class="d-block d-lg-flex justify-content-between gap-1 gap-lg-2" id="chartControls">
+        <div class="d-flex mb-2 mb-lg-0 gap-2">
+          <p class="pt-1 text-white opacity-75">showing slice: </p>
+
+          <div class="small-box counter">
+            <span class="number-box text-white">22</span>
+            <span class="text-white ms-2 opacity-75">/ 67</span>
+          </div>
+        </div>
+        <div class="d-flex gap-2 justify-content-between">
+          <div class="small-box border-dark border">
+            <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.5,12a1,1,0,0,0,.47.85l8,5a1,1,0,0,0,.53.15.91.91,0,0,0,.48-.13A1,1,0,0,0,18.5,17V7A1,1,0,0,0,17,6.15l-8,5A1,1,0,0,0,8.5,12Z"/>
+              <rect height="12" width="2" x="5.5" y="6"/>
+            </svg>
+          </div>
+
+          <div class="small-box border-dark border">
+            <svg class="prev-icon" height="10" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1"
+                 viewBox="0 0 512 512" width="10" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M405.2,232.9L126.8,67.2c-3.4-2-6.9-3.2-10.9-3.2c-10.9,0-19.8,9-19.8,20H96v344h0.1c0,11,8.9,20,19.8,20  c4.1,0,7.5-1.4,11.2-3.4l278.1-165.5c6.6-5.5,10.8-13.8,10.8-23.1C416,246.7,411.8,238.5,405.2,232.9z"/></svg>
+          </div>
+
+          <div class="small-box border-secondary border">
+            <svg height="15" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1"
+                 viewBox="0 0 512 512" width="15" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M417.4,224H94.6C77.7,224,64,238.3,64,256c0,17.7,13.7,32,30.6,32h322.8c16.9,0,30.6-14.3,30.6-32  C448,238.3,434.3,224,417.4,224z"/></svg>
+          </div>
+
+          <div class="small-box gradient">
+            <svg class="white-color" height="15" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1"
+                 viewBox="0 0 512 512" width="15" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M417.4,224H288V94.6c0-16.9-14.3-30.6-32-30.6c-17.7,0-32,13.7-32,30.6V224H94.6C77.7,224,64,238.3,64,256  c0,17.7,13.7,32,30.6,32H224v129.4c0,16.9,14.3,30.6,32,30.6c17.7,0,32-13.7,32-30.6V288h129.4c16.9,0,30.6-14.3,30.6-32  C448,238.3,434.3,224,417.4,224z"/></svg>
+          </div>
+
+          <div class="small-box border-dark border">
+            <svg height="10" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1"
+                 viewBox="0 0 512 512" width="10" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M405.2,232.9L126.8,67.2c-3.4-2-6.9-3.2-10.9-3.2c-10.9,0-19.8,9-19.8,20H96v344h0.1c0,11,8.9,20,19.8,20  c4.1,0,7.5-1.4,11.2-3.4l278.1-165.5c6.6-5.5,10.8-13.8,10.8-23.1C416,246.7,411.8,238.5,405.2,232.9z"/></svg>
+          </div>
+
+          <div class="small-box border-dark border">
+            <svg class="prev-icon" width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.5,12a1,1,0,0,0,.47.85l8,5a1,1,0,0,0,.53.15.91.91,0,0,0,.48-.13A1,1,0,0,0,18.5,17V7A1,1,0,0,0,17,6.15l-8,5A1,1,0,0,0,8.5,12Z"/>
+              <rect height="12" width="2" x="5.5" y="6"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

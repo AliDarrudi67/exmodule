@@ -1,1 +1,19 @@
-<p>chart-result works!</p>
+<div class="container mt-3">
+  <div class="row">
+    <h3 class="text-white text-start">Results</h3>
+
+    <app-box [boxHeight]="'290px'" [paddingFromTop]="'40px'">
+      <ng-container body>
+        <div class="circle-content position-absolute">
+          <p>End Balance</p>
+          <p class="fw-bold fs-5">16.250.00 USD</p>
+          <p>Calculated Profit: 62.5%</p>
+          <p>Trades In Profit:5/7</p>
+        </div>
+        <div class="result-circle position-absolute"></div>
+<!--        <div class="result-circle position-absolute"></div>-->
+<!--        <div class="result-circle position-absolute"></div>-->
+      </ng-container>
+    </app-box>
+  </div>
+</div>

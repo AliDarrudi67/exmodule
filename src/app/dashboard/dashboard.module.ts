@@ -21,8 +21,14 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {FormsModule} from "@angular/forms";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {SharedModule} from "../shared/shared.module";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
 
-
+import * as CanvasJSAngularChart from '../../assets/canvasjs.angular.component';
+import {NgApexchartsModule} from "ng-apexcharts";
+var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -35,7 +41,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     ChartHeaderComponent,
     ChartBodyComponent,
     ChartResultComponent,
-    TradeListComponent
+    TradeListComponent,
+    CanvasJSChart
   ],
   imports: [
     CommonModule,
@@ -48,7 +55,12 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    SharedModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
+    NgApexchartsModule
   ]
 })
 export class DashboardModule {
